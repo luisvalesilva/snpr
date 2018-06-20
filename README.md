@@ -28,8 +28,9 @@ Usage: snpr.py [OPTIONS] FASTA
   Given a FASTA file, introduce SNPs at the specified frequency.
 
 Options:
-  -f, --freq FLOAT           Mutation (SNP) frequency. Default: 0.01 (1%)
+  -f, --snp_freq FLOAT       Mutation (SNP) frequency. Default: 0.01 (1%)
   -r, --random_seed INTEGER  Seed for pseudo-random runs. Default: None
+  --version                  Show the version and exit.
   --help                     Show this message and exit.
 ```
 

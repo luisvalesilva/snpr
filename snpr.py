@@ -9,20 +9,18 @@
     :license: MIT, see LICENSE for more details.
 """
 
-__author__ = "Luis Vale Silva"
-__status__ = "Development"
-
 import click
 from random import random, choice, seed
 
 
 @click.command()
-@click.option('-f', '--freq', default=0.01,
-              help='Mutation (SNP) frequency. Default: 0.01 (i.e. 1%)')
+@click.option('-f', '--snp_freq', default=0.01,
+              help='Mutation (SNP) frequency. Default: 0.01 (1%)')
 @click.option('-r', '--random_seed', type=int, default=None,
               help='Seed for pseudo-random runs. Default: None')
-@click.argument('fasta', type=click.Path(exists=True))
-def mutate(fasta, freq, random_seed=None):
+@click.argument('fasta')
+@click.version_option(version='0.0.1', prog_name='SNPr')
+def mutate(fasta, snp_freq, random_seed=None):
     """Given a FASTA file, introduce SNPs at the specified frequency."""
     if random_seed is not None:
         seed(random_seed)
@@ -37,7 +35,7 @@ def mutate(fasta, freq, random_seed=None):
                 line = list(line.strip())
                 for i, nt in enumerate(line):
                     mut = random()
-                    if mut < freq:
+                    if mut < snp_freq:
                         # Introduce SNP
                         line[i] = choice([x for x in 'ACTG' if x != nt.upper()])
                 click.echo(''.join(line))
