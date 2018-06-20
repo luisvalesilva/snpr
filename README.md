@@ -7,14 +7,23 @@ Introduce point mutations (SNPs) in FASTA at specified frequency.
 
 2. Install all required packages from Pipfile
 
-```shell
+```console
 $ pipenv install
 ```
 
 3. Activate the Pipenv shell:
 
-```shell
+```console
 $ pipenv shell
+```
+
+4. You are now ready to use snpr:
+
+Check out the help menu.
+
+```console
+$ python snpr.py --help
+
 
 Usage: snpr.py [OPTIONS]
 
@@ -27,17 +36,9 @@ Options:
   --help                     Show this message and exit.
 ```
 
-4. You are now ready to use snpr:
-
-Check out the help menu.
-
-```shell
-$ python snpr.py --help
-```
-
 Example commmand to introduce 1% of SNPs in the supplied test FASTA (using the random seed argument provides pseudo-random runs, for reproducible output).
 
-```shell
+```console
 $ cat test.fa
 
 >chrA
