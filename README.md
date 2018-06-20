@@ -23,8 +23,6 @@ Check out the help menu.
 
 ```console
 $ python snpr.py --help
-
-
 Usage: snpr.py [OPTIONS]
 
   Given a fasta file, introduce SNPs at the specified frequency.
@@ -40,7 +38,6 @@ Example commmand to introduce 1% of SNPs in the supplied test FASTA (using the r
 
 ```console
 $ cat test.fa
-
 >chrA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAA
@@ -51,7 +48,6 @@ TTTTTTTTTTTTTTTTTTTT
 CCCCCCCCCCCCCCCCCCCCCCC
 
 $ python snpr.py -f test.fa -s 0.01 -r 111
-
 >chrA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAA
