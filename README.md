@@ -33,7 +33,7 @@ Options:
   --help                     Show this message and exit.
 ```
 
-Example command to introduce 1% of SNPs in the supplied test FASTA files. Using the optional random seed argument provides pseudo-random runs, for reproducible output.
+Example command to introduce 1% of SNPs in the supplied test FASTA files. Using the optional random seed argument makes the run pseudo-random, for reproducible output.
 
 ```console
 $ cat test.fa
