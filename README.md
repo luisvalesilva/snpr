@@ -1,4 +1,4 @@
-# snpr
+# SNPr
 Introduce point mutations (SNPs) in FASTA at specified frequency.
 
 ## Running snpr
