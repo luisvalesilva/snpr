@@ -18,7 +18,7 @@ from random import random, choice, seed
               help='Mutation (SNP) frequency. Default: 0.01 (1%)')
 @click.option('-r', '--random_seed', type=int, default=None,
               help='Seed for pseudo-random runs. Default: None')
-@click.argument('fasta')
+@click.argument('fasta', type=click.Path(exists=True))
 @click.version_option(version='0.0.1', prog_name='SNPr')
 def mutate(fasta, snp_freq, random_seed=None):
     """Given a FASTA file, introduce SNPs at the specified frequency."""
