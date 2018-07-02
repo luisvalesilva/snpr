@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 
 """
-    SNPer
+    SNPr
     ~~~~~
-    SNPer introduces point mutations (SNPs) in a given FASTA file at a specified
+    SNPr introduces point mutations (SNPs) in a given FASTA file at a specified
     mutation frequency.
 
     :license: MIT, see LICENSE for more details.
